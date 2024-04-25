@@ -35,6 +35,15 @@
     ]
     // Write your code here
 
+    let vegetarianMenu = menu.filter(dish => dish.isVegetarian === true);
+    let menuList = document.querySelector("#menu");
+
+    vegetarianMenu.forEach(item => {
+      let itemEl = document.createElement("li");
+      itemEl.textContent = item.name;
+      menuList.appendChild(itemEl);
+    })
+
   </script>
 </body>
 
